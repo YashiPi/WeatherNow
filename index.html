@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header id="header_area">
+        <div class="branding">
+            <img src="/logo.png" alt="">
+            <span>WeatherNow</span>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#header_area">HOME</a></li>
+                <li><a href="mailto:yashi.pitti.ug22@nsut.ac.in">CONTACT</a></li>
+                <li><a href="#" id="about">ABOUT</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="search">
+            <div class="search-bar">
+                <input type="text" placeholder="Search city" name="search-ip" id="search-ip">
+            </div>
+            <div class="btn">
+                <button>Search</button>
+            </div>
+        </div>
+        <div class="cards">
+        <div class="display">
+            <div id="intro">
+                <p class="fancy">Weather Now</p>
+                <p>Bringing you real-time weather updates, so you're always prepared!</p>
+            </div>
+            <div class="error">
+                <p>Invalid city name</p>
+            </div>
+            <div class="weather">
+                <!-- <h1 class="city-name"></h1> -->
+                <p id="date"></p>
+                <img src="images/clear.png" class="weather-icon">
+                <h1 class="temp">22 °C</h1>
+                <h2 class="city">New York</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="images/humidity.png" alt="">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/wind.png" alt="">
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="forecast-container">
+            <h1>5 Day Forecast</h1>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Day</th>
+                    <th>Temperature</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody id="forecast-data">
+                  <!-- Forecast data will be inserted here dynamically -->
+                </tbody>
+              </table>
+        </div> -->
+    </div>
+    </main>
+    <footer>
+        <p>Weather data provided by <a href="https://openweathermap.org">OpenWeatherMap</a></p>
+    </footer>
+    <script src="/index.js">
+        window.addEventListener('load',()=>{
+            const intro = document.getElementById('intro');
+            intro.style.display='block';
+        })
+    </script>
+    
+</body>
+</html>
